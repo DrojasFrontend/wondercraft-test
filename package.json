@@ -1,0 +1,27 @@
+{
+  "name": "wondercraft-test",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "2.26.3",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-imagemin": "5.0.3",
+    "gulp-newer": "1.4.0",
+    "gulp-sass": "4.0.2",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-uglify": "3.0.2",
+    "gulp-watch": "5.0.1"
+  },
+  "devDependencies": {
+    "gulp-connect-php": "1.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
