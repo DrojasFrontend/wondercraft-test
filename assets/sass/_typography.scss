@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Lora&display=swap');
+
+$base-font-family: "Karla", sans-serif;
+$base-font-title: "Lora", serif;
+
+$base-unit: "em" !default;
+$base-font-size: 16px !default;
+$base-line-height: normal !default;
+
+$h1-font-size: 2.0 * $base-font-size !default; /* 32px */
+$h2-font-size: 2.0 * $base-font-size !default; /* 32px */
+$h3-font-size: 1.25 * $base-font-size !default;
+$h4-font-size: 1 * $base-font-size !default;
+$h5-font-size: 0.83 * $base-font-size !default;
+$h6-font-size: 0.67 * $base-font-size !default;
+
+$p-font-size: 1.0 * $base-font-size !default; /* 18px */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-family: $base-font-title;
+  font-size: $h1-font-size;
+  font-weight: 400;
+  margin-bottom: 19px;
+  line-height: 31px;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+h2 {
+  //color: $color-title;
+}
+
+span {
+  font-weight: 100;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 17px;
+  font-size: $p-font-size;
+  line-height: 21px;
+}
+
+/* Responsive */
+
+$h1-font-size-responsive: 1.875 * $base-font-size !default; /* 30px */
+$h3-font-size-responsive: 1.125 * $base-font-size !default; /* 16px */
+$p-font-size-responsive: 0.875 * $base-font-size !default; /* 16px */
+$p-font-size-respopnsive-medium: 0.75 * $base-font-size !default; /* 12px */
+$p-font-size-respopnsive-small: 0.625 * $base-font-size !default; /* 10px */
+
