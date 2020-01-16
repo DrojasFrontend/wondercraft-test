@@ -37,3 +37,44 @@
         text-decoration: underline;
     }
 }
+
+/*################ Featured Products */
+
+.featured-products {
+    padding: 50px 0 79px 0;
+
+    .products {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    figure {
+        width: 25%;
+        padding: 10px 10px 19px;
+        text-align: center;
+        &:hover {
+            background-color: $bckg-gray;
+        }
+    }
+
+    a {
+        display: block;
+    }
+
+    figcaption {
+        width: 100%;
+        max-width: 188px;
+        margin: 0 auto;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    p {
+        color: $color-primary;
+    }
+
+    span {
+        font-size: 24px;
+        color: $color-primary;
+    }
+}
