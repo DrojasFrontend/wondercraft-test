@@ -7,9 +7,16 @@ function getJson() {
     fetch(api_url)
         .then(res => res.json())
         .then(dataJson => {
+            spinner();
             getProducts(dataJson)
             //console.log(countDataJson)
         })
+}
+
+// Preloading Gif
+function spinner() {
+    var spinner = document.getElementById('spinner')
+    spinner.classList.add("hidden");
 }
 
 // Format Price
@@ -18,6 +25,7 @@ function formatPrice(price) {
     return price
 }
 
+// Add Img Best Seller
 function bestSeller(name) {
     var name = name.includes('Brazil Cachoeira');    
     return name;
@@ -37,8 +45,6 @@ function getProducts(dataJson) {
     const countDataJson = dataJson.data.length;
         for(var i = 0; i < countDataJson; i++ ) {
 
-            var figure = document.getElementsByClassName('product')
-            
             if(bestSeller(dataJson.data[i].name)) {
                 products.innerHTML += `
                 <figure class="product">
@@ -71,19 +77,14 @@ function getProducts(dataJson) {
                 </figure>
             `
             }
-
-            
             //console.log(dataJson.data[i].name)
         }
-
 }
 
 getJson();
 
-
 setTimeout(function(){
     document.getElementById('comment').classList.add('visible');
-    
 }, 3000);
 
 
