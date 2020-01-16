@@ -81,4 +81,10 @@ function getProducts(dataJson) {
 getJson();
 
 
+setTimeout(function(){
+    document.getElementById('comment').classList.add('visible');
+    
+}, 3000);
+
+
 
