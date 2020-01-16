@@ -9,3 +9,12 @@
     }
 }
 
+.column {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.grid-5 {
+    width: 20%;
+}
+
