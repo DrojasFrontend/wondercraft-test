@@ -87,6 +87,7 @@
 
     img {
         margin-bottom: 16px;
+        object-fit: cover;
     }
 
     a {
@@ -277,6 +278,9 @@
     right: 0;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.26);
     z-index: 99999;
     opacity: 0;
@@ -284,35 +288,97 @@
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
+
+    @media only screen and (max-width: $breakpoint-tablet-small) {
+        padding: 0 20px;
+    }
+
     h2 {
         margin-bottom: 12px;
+
+        @media only screen and (max-width: $breakpoint-tablet-small) {
+            padding-right: 20px;
+        }
+
     }
     &:target {
         opacity: 1;
         pointer-events: auto;
     }
-    & > div {
+    .modal-dialog-content {
         width: 100%;
         max-width: 708px;
         position: relative;
-        margin: 4% auto;
         padding: 20px;
         background: $bckg-white;
         -moz-transition: opacity 400ms ease-in;
         transition: opacity 400ms ease-in;
+
+        @media only screen and (max-width: $breakpoint-tablet-small) {
+            max-width: 100%;
+        }
+    }
+
+    .modal-dialog-header {
+        padding: 0;
+        margin-bottom: 20px;
+        overflow-x: hidden;
+        height: 371px;
+        max-height: 371px;
+
+        @media only screen and (max-width: $breakpoint-tablet-small) {
+            margin-bottom: 0;
+        }
+
+        p {
+
+            @media only screen and (max-width: $breakpoint-tablet-small) {
+                padding-right: 20px;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &#modal-dialog-header::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: $bckg-white;
+        }
+        
+        &#modal-dialog-header::-webkit-scrollbar {
+            width: 6px;
+            background-color: $bckg-white;
+        }
+        
+        &#modal-dialog-header::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: $bckg-primary;
+        }
     }
 
     .close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 17px;
+        right: 24px;
         width: 24px;
         text-decoration: none;
     }
 
-    .modal-dialog-btn {
+    .modal-dialog-footer {
         display: flex;
         justify-content: flex-end;
+        position: relative;
+        padding: 20px 0 0 0;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: calc(100% - -40px);
+            border-top: 1px solid #eaeaea;
+        }        
         a {
             padding: 11px 35px;
             font-size: 16px;

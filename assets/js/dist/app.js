@@ -46,7 +46,7 @@ function getProducts(dataJson) {
                         BEST SELLER
                     </span>
                     <a href="#" id="${dataJson.data[i].id}">
-                        <img src="${dataJson.data[i].image}" alt="${dataJson.data[i].name}">
+                        <img src="${dataJson.data[i].image}" srcset="${dataJson.data[i].image}" 1280w alt="${dataJson.data[i].name}" size="(max-width: 1280px) 100vw">
                         <figcaption>
                             <p>${dataJson.data[i].name}</p>
                             <span>
@@ -60,11 +60,11 @@ function getProducts(dataJson) {
                 products.innerHTML += `
                 <figure class="product">
                     <a href="#" id="${dataJson.data[i].id}">
-                        <img src="${dataJson.data[i].image}" alt="${dataJson.data[i].name}">
+                        <img src="${dataJson.data[i].image}" srcset="${dataJson.data[i].image}" 1280w alt="${dataJson.data[i].name}" size="(max-width: 1280px) 100vw">
                         <figcaption>
                             <p>${dataJson.data[i].name}</p>
                             <span>
-                                ${formatPrice(dataJson.data[i].price)}
+                                $ ${formatPrice(dataJson.data[i].price)}
                             </span>
                         </figcaption>
                     </a>
