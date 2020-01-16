@@ -46,15 +46,40 @@
     .products {
         display: flex;
         flex-flow: row wrap;
+        padding: 54px 0 0 0;
+
+        @media only screen and (max-width: $breakpoint-tablet-small) { 
+            padding: 33px 0 0 0;
+        }
     }
 
     figure {
+        position: relative;
         width: 25%;
+        margin-bottom: 5px;
         padding: 10px 10px 19px;
         text-align: center;
+        transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+        transition-delay: .1s;
+        transform: translateZ(0);
         &:hover {
             background-color: $bckg-gray;
+            opacity: 1 !important;
+            box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px, rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+            transform: translate(0, -4px);
         }
+
+        @media only screen and (max-width: $breakpoint-tablet-small) { 
+            width: 33.333333%;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) { 
+            width: 50%;
+        }
+    }
+
+    img {
+        margin-bottom: 16px;
     }
 
     a {
@@ -73,8 +98,119 @@
         color: $color-primary;
     }
 
+    .best-seller {
+        position: absolute;
+        top: 23px;
+        right: 32px;
+        display: flex;
+        align-items: center;
+        width: 61px;
+        height: 61px;
+        font-size: 14px;
+        color: $color-white;
+        border-radius: 50%;
+        background-color: $bckg-primary;
+    }
+
     span {
         font-size: 24px;
         color: $color-primary;
     }
 }
+
+/*################ Newsletter */
+
+.newsletter {
+    padding: 63px 0 92px 0;
+    background-color: $bckg-secondary;
+    @media only screen and (max-width: $breakpoint-mobile) { 
+        padding: 33px 0 31px 0;
+        text-align: center;
+    }
+    h2 {
+        font-size: 48px;
+        margin-bottom: 26px;
+        line-height: 50px;
+        @media only screen and (max-width: $breakpoint-mobile) { 
+            font-size: 36px;
+            line-height: 38px;
+        }
+    }
+    p {
+        margin-bottom: 8px;
+        color: #6b3d10;
+        font-weight: bold;
+        
+    }
+
+    form {
+        display: flex;
+        @media only screen and (max-width: $breakpoint-mobile) { 
+            flex-direction: column;
+        }
+    }
+
+    input {
+        width: 100%;
+        max-width: 643px;
+        padding: 17px 22px;
+        font-size: 18px;
+        color: #8a5523;
+        border: 0;
+        line-height: 28px;
+        outline: none;
+        background-color: #e9d4c1;
+        @media only screen and (max-width: $breakpoint-mobile) { 
+            text-align: center;
+        }
+    }
+
+    .btn {
+        @media only screen and (max-width: $breakpoint-mobile) { 
+            max-width: 100%;
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 18px;
+        color: #8a5523;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        font-size: 18px;
+        color: #8a5523;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        font-size: 18px;
+        color: #8a5523;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        font-size: 18px;
+        color: #8a5523;
+    }
+}
+
+@keyframes tada {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    10%, 20% {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    30%, 50%, 70%, 90% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    40%, 60%, 80% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .tada {
+    animation-name: tada;
+  }

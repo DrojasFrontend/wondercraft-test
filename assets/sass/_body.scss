@@ -246,3 +246,15 @@ ul {
 a {
     text-decoration: none;
 }
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 181px;
+    padding: 17px 23px;
+    font-size: 24px;
+    color: $color-white;
+    border: 0;
+    line-height: 28px;
+    background-color: $bckg-primary;
+}
